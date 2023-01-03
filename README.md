@@ -29,6 +29,19 @@ Ansible collection is used to get, create, modify or delete the Data Domain reso
   private_key_file = /root/.ssh/id_rsa
 
   ```
+  If you want to use user password instead of rsa login, use `ansible_ssh_pass` parameter to specify password and remove `private_key_file` parameter. e.g 
+  
+    ```
+  [dd]
+  10.150.15.9
+
+  [dd:vars]
+  ansible_port = 22
+  ansible_user = sysadmin
+  ansible_ssh_pass = 'password'
+
+  ```
+  
 ##  Ansible Playbook
 To make the rest api call or ssh call from the host you are running the playbook; use below parameter at the top of the playbook
 
