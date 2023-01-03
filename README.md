@@ -51,21 +51,21 @@ To make the rest api call or ssh call from the host you are running the playbook
 
   ```
 - name: Data Domain Playbook.
-  hosts: dd
-  connection: local
-  gather_facts: false
+    hosts: dd
+    connection: local
+    gather_facts: false
 
-  tasks:
-    - name: Create Share
-      dellemc.datadomain.cifs:
-          state: create
-          share: backup_share
-          clients: '*'
-          path: /backup
-      register: status
-    
-    - debug:
-        msg: "{{ status }}"
+    tasks:
+      - name: Create Share
+        dellemc.datadomain.cifs:
+            state: create
+            share: backup_share
+            clients: '*'
+            path: /backup
+        register: status
+
+      - debug:
+          msg: "{{ status }}"
   ```
 Documentation for the collection.
 
