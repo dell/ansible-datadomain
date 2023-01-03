@@ -31,7 +31,7 @@ Ansible collection is used to get, create, modify or delete the Data Domain reso
   ```
   If you want to use user password instead of rsa login, use `ansible_ssh_pass` parameter to specify password and remove `private_key_file` parameter. e.g 
   
-    ```
+  ```
   [dd]
   10.150.15.9
 
