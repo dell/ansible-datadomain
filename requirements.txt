@@ -1,0 +1,12 @@
+############################################################################################
+# WARNING THIS FILE IS MEANT TO BE OVERWRITTEN WITH A COOKIECUTTER UPDATE                  #
+#  DO NOT EDIT UNLESS YOU INTEND ON MANAGING THE CHANGES, OTHERWISE SUBMIT                 #
+#  A CHANGE TO https://github.emcrubicon.com/galaxy-collections/galaxy-collection-template #
+############################################################################################
+#Copyright ©️ 2022 Dell Inc. or its subsidiaries.
+# Ansible Requirements
+#
+ansible
+requests
+urllib3
+paramiko
