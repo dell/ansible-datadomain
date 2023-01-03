@@ -50,6 +50,12 @@ To make the rest api call or ssh call from the host you are running the playbook
 ## Sample Playbook
 
   ```
+- name: Data Domain Playbook.
+  hosts: dd
+  connection: local
+  gather_facts: false
+
+  tasks:
     - name: Create Share
       dellemc.datadomain.cifs:
           state: create
