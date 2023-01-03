@@ -10,7 +10,7 @@ Ansible collection is used to get, create, modify or delete the Data Domain reso
 
   Use below command to install the collection.
 
-  `ansible-galaxy collection install git+https://github.com/kshirs1/datadomain.git`
+  `ansible-galaxy collection install git+https://github.com/dell/ansible-datadomain.git`
 
   Install all packages from the requirements.txt file
   
