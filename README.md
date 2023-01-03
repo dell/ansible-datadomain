@@ -14,7 +14,7 @@ Ansible collection is used to get, create, modify or delete the Data Domain reso
 
   Install all packages from the requirements.txt file
   
-  `pip install -r requirements.txt`
+  `pip install -r pip install <collection-install-path>/dellemc/datadomain/requirements.txt`
 
 ## Inventory file
 
