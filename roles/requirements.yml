@@ -1,0 +1,18 @@
+# Copyright ©️ 2022 Dell Inc. or its subsidiaries.
+---
+#
+# Collection Roles
+#
+# Note: Make sure to edit the below requirements based on the context of the installation.
+#  For example, if ssh is not availible make sure to use https: instaed. However this will require
+#  token authentication.
+#
+# Example (https):
+# - src: https://github.emcrubicon.com/galaxy-roles/networker_workflow_toggle.git
+#   scm: git
+#   version: 1.0.0
+#
+# Example (ssh/git):
+# - src: git@github.com/networker_workflow_toggle.git
+#   scm: git
+#   version: 1.0.0
