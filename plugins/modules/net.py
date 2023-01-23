@@ -58,7 +58,7 @@ options:
     state:
         description: Use following options to select the action
         type: str
-        choices: [config, create, disable, enable, add, del, reset, set, destroy, test, modify] 
+        choices: [config, create, disable, enable, add, del, reset, set, destroy, test, modify, show] 
         required: True
     ifname:
         description: interface name
