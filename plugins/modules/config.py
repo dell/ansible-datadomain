@@ -42,6 +42,8 @@ options:
         description: Use this option to mention the action you want to run. Choices supported are 'reset', 'set'
         required: true
         type: str
+        choices:
+          - set, reset
     option: 
         description: Here mention which configuration item you want to work with. 
         type: str
