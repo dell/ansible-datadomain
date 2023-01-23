@@ -30,6 +30,7 @@ The adminaccess command manages access control and enables users enable/disable 
     
     table, td, th {text-align: center; border:1px solid black;}
     li {list-style-type:square; text-align: left;}
+    .textaligncenter {text-align: center;}
 </style>
 
 <table>
@@ -93,7 +94,7 @@ The adminaccess command manages access control and enables users enable/disable 
 ## Authors
 Sudarshan Kshirsagar (@kshirs1)
 
-<div style="text-align: right"><a href="#contents">Back to Contents</a></div>
+<div class="textaligncenter"><a href="#contents">Back to Contents</a></div>
 
 ----------
 
