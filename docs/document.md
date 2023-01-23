@@ -26,11 +26,6 @@ The adminaccess command manages access control and enables users enable/disable 
 -   adminaccess show
 
 ## Parameters
-<style >
-    table, td, th {text-align: center; border:1px solid black;}
-    li {list-style-type:square; text-align: left;}
-    .textaligncenter {text-align: center;}
-</style>
 
 <table>
     <tr>
@@ -93,7 +88,7 @@ The adminaccess command manages access control and enables users enable/disable 
 ## Authors
 Sudarshan Kshirsagar (@kshirs1)
 
-<div class="textaligncenter"><a href="#contents">Back to Contents</a></div>
+<div><a href="#contents">Back to Contents</a></div>
 
 ----------
 
@@ -113,12 +108,6 @@ The cifs command manages CIFS data access between a protection system and Window
   - cifs show config
 
 ## Parameters
-
-<style >
-    
-    table, td, th {text-align: center; border:1px solid black;}
-    li {list-style-type:square; text-align: left;}
-</style>
 
 <table>
     <tr>
@@ -224,7 +213,7 @@ The cifs command manages CIFS data access between a protection system and Window
 ## Authors
 Sudarshan Kshirsagar (@kshirs1)
 
-<div style="text-align: right"><a href="#contents">Back to Contents</a></div>
+<div style="text-align:right"><a href="#contents">Back to Contents</a></div>
 
 ----------
 
@@ -247,19 +236,6 @@ Physical capacity measurement (PCM) provides space usage information for a sub-s
 - compression throttle reset
 
 ## Parameters
-
-<style >
-    
-    table, td, th {text-align: center; border:1px solid black;}
-    li {list-style-type:square; text-align: left;}
-    td.elbow-placeholder {
-        border-left: 1px solid #000;
-        border-top: 0;
-        border-bottom: 0;
-        width: 10px;
-        min-width: 10px;
-    }
-</style>
 
 <table>
     <tr>
@@ -798,11 +774,6 @@ space usage of each storage unit.
 - ddboost enable
 - ddboost disable
 ## Parameters
-<style >
-    
-    table, td, th {text-align: center; border:1px solid black;}
-    li {list-style-type:square; text-align: left;}
-</style>
 
 <table>
     <tr>
