@@ -27,7 +27,6 @@ The adminaccess command manages access control and enables users enable/disable 
 
 ## Parameters
 <style >
-    
     table, td, th {text-align: center; border:1px solid black;}
     li {list-style-type:square; text-align: left;}
     .textaligncenter {text-align: center;}
