@@ -67,6 +67,9 @@ To make the rest api call or ssh call from the host you are running the playbook
       - debug:
           msg: "{{ status }}"
   ```
-Documentation for the collection.
+## Documentation for the collection.
+
+Module specific document can be found here - https://github.com/dell/ansible-datadomain/blob/main/docs/document.md
+
 
 #Copyright ©️ 2022 Dell Inc. or its subsidiaries.
