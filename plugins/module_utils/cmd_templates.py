@@ -95,7 +95,7 @@ def nfs():
 
     )
 
-    supported_commands = dict(nfs_export_add='["nfs export add $export_name clients $cliens"]',
+    supported_commands = dict(nfs_export_add='["nfs export add $export_name clients $clients"]',
                               nfs_export_del='["nfs export del $export_name clients $clients"]',
                               nfs_disable='["nfs disable"]',
                               nfs_enable='["nfs enable"]',

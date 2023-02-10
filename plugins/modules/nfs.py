@@ -17,6 +17,7 @@ import ansible.module_utils.common.json
 import ansible.module_utils.compat.importlib
 import json
 from ..module_utils.cmd_templates import nfs
+from ..module_utils.dd_connect import tab_to_json
 
 
 DOCUMENTATION = r'''
@@ -185,6 +186,9 @@ def main():
         cmd_output = cmd_builder.run_cmd(module=module, command=command, is_filter=is_filter, server=server,
                                          user=user, port=port, private_key=private_key, password=password, header=header)
         changed = will_change
+        if 'show' in str(command):
+            jsonout = tab_to_json(cmd_output['output'], header)
+            cmd_output['output'] = jsonout
     else:
         state = arg_dict['state']
         possible_options = {}
