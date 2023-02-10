@@ -75,15 +75,15 @@ def ntp():
 
 def nfs():
     conditions = dict(
-        nfs_export_add=dict(query=dict(state='add'), req_key=['export-name', 'client-list'], will_change=True, header=None),
-        nfs_export_del=dict(query=dict(state='del'), req_key=['export-name', 'client-list'], will_change=True, header=None),
+        nfs_export_add=dict(query=dict(state='add'), req_key=['export-name', 'clients'], will_change=True, header=None),
+        nfs_export_del=dict(query=dict(state='del'), req_key=['export-name', 'clients'], will_change=True, header=None),
         nfs_disable=dict(query=dict(state='disable'), req_key=[], opt_key=['version'], will_change=True, header=None),
         nfs_enable=dict(query=dict(state='enable'), req_key=[], opt_key=['version'], will_change=True, header=None),
         nfs_export_create=dict(query=dict(state='create'), req_key=['export-name', 'path'],
-                               opt_key=['client-list', 'export-options'], will_change=True, header=None),
+                               opt_key=['clients', 'export-options'], will_change=True, header=None),
         nfs_export_destroy=dict(query=dict(state='destroy'), req_key=['export-name'], will_change=True, header=None),
         nfs_export_modify=dict(query=dict(state='modify'),
-                               req_key=['export-name', 'client-list', 'path', 'export-options'],
+                               req_key=['export-name', 'clients', 'path', 'export-options'],
                                will_change=True, header=None),
         nfs_export_rename=dict(query=dict(state='rename'), req_key=['export-name', 'new-export-name'],
                                will_change=True, header=None),
@@ -93,13 +93,13 @@ def nfs():
 
     )
 
-    supported_commands = dict(nfs_export_add='["nfs export add $export_name clients $client_list"]',
-                              nfs_export_del='["nfs export del $export_name clients $client_list"]',
+    supported_commands = dict(nfs_export_add='["nfs export add $export_name clients $cliens"]',
+                              nfs_export_del='["nfs export del $export_name clients $clients"]',
                               nfs_disable='["nfs disable"]',
                               nfs_enable='["nfs enable"]',
-                              nfs_export_create='["nfs export create $export_name path $path clients $client_list"]',
+                              nfs_export_create='["nfs export create $export_name path $path"]',
                               nfs_export_destroy='["nfs export destroy $export_name"]',
-                              nfs_export_modify='["nfs export modify $export_name clients $client-list options $export_options"]',
+                              nfs_export_modify='["nfs export modify $export_name clients $clients options $export_options"]',
                               nfs_export_rename='["nfs export rename $export_name $new_export_name"]',
                               nfs_client_reset='["nfs reset clients"]',
                               nfs_restart='["nfs restart"]',
