@@ -90,6 +90,8 @@ def nfs():
         nfs_client_reset=dict(query=dict(state='reset'), req_key=[], will_change=True, header=None),
         nfs_restart=dict(query=dict(state='restart'), req_key=[], opt_key=['version'], will_change=True, header=None),
         nfs_status=dict(query=dict(state='status'), req_key=[], will_change=True, header=None),
+        nfs_show_ex=dict(query=dict(state='show'), req_key=['export-name'], will_change=True, header=None),
+        nfs_show=dict(query=dict(state='show'), req_key=[], will_change=True, header=None),
 
     )
 
@@ -103,7 +105,9 @@ def nfs():
                               nfs_export_rename='["nfs export rename $export_name $new_export_name"]',
                               nfs_client_reset='["nfs reset clients"]',
                               nfs_restart='["nfs restart"]',
-                              nfs_status='["nfs status"]'
+                              nfs_status='["nfs status"]',
+                              nfs_show_ex='[ nfs export show list $export_name"]',
+                              nfs_show='[" nfs export show list"]',
                               )
     return conditions, supported_commands
 

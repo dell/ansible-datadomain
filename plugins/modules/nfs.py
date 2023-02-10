@@ -136,9 +136,9 @@ def main():
     conditions, supported_commands = nfs()
     fields = {
         'state': {'type': 'str', 'choices': ['add', 'del', 'create', 'destroy', 'enable', 'disable', 'modify',
-                                             'rename', 'reset', 'set', 'restart', 'status'], 'required': True},
+                                             'rename', 'reset', 'set', 'restart', 'status', 'show'], 'required': True},
         'path': {'type': 'str'},
-        'client-list': {'type': 'str'},
+        'clients': {'type': 'str'},
         'option-list': {'type': 'str'},
         'version': {'type': 'str'},
         'export-name': {'type': 'str'},
@@ -198,4 +198,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
