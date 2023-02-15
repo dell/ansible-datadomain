@@ -1,6 +1,8 @@
 # Ansible Collection for Dell Technologies DataDomain
 © 2022 Dell Inc. or its subsidiaries. All rights reserved. Dell and other trademarks are trademarks of Dell Inc. or its subsidiaries. Other trademarks may be trademarks of their respective owners.
 
+**Note - Please note that all modules of this collection are not idempotant. Developers are working on adding idempotency feature. Thank you.
+
 ## Contents
 *   [adminaccess](#adminaccess)
 *   [cifs](#cifs)
@@ -2293,7 +2295,7 @@ The nfs command enables you to add NFS clients and manage access to a protection
         <td width="80%">mtree or directory path on the data domain</td>
     </tr>
     <tr>
-        <td colspan=1>client-list</td>
+        <td colspan=1>clients</td>
         <td width="20%">str</td>
         <td>No</td>
         <td></td>
@@ -2325,7 +2327,7 @@ The nfs command enables you to add NFS clients and manage access to a protection
         <td width="80%">new export name</td>
     </tr>
     <tr>
-        <td colspan=1>export-options</td>
+        <td colspan=1>options</td>
         <td width="20%">str</td>
         <td>No</td>
         <td></td>
@@ -2358,6 +2360,7 @@ The nfs command enables you to add NFS clients and manage access to a protection
         path: /data/col1/backupserver01
         client-list: 10.0.0.3 10.0.0.4
         export-options: 'rw,no_root_squash,no_all_squash,secure'
+    **Even if Path does not exists, nfs share will be created. So use MTree module to create it.
                                        
 
   - name: remove a client from an export
