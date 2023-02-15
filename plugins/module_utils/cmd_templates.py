@@ -83,7 +83,7 @@ def nfs():
                                opt_key=['clients', 'options'], will_change=True, header=None),
         nfs_export_destroy=dict(query=dict(state='destroy'), req_key=['export-name'], will_change=True, header=None),
         nfs_export_modify=dict(query=dict(state='modify'),
-                               req_key=['export-name', 'clients', 'path', 'options'],
+                               req_key=['export-name', 'clients', 'options'],
                                will_change=True, header=None),
         nfs_export_rename=dict(query=dict(state='rename'), req_key=['export-name', 'new-export-name'],
                                will_change=True, header=None),
