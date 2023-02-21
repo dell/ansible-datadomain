@@ -1,7 +1,7 @@
 # Ansible Collection for Dell Technologies DataDomain
 © 2022 Dell Inc. or its subsidiaries. All rights reserved. Dell and other trademarks are trademarks of Dell Inc. or its subsidiaries. Other trademarks may be trademarks of their respective owners.
 
-**Note - Please note that all modules of this collection are not idempotant. Developers are working on adding idempotency feature. Thank you.
+> **Note that the modules in this collection do not support idempotency.**
 
 ## Contents
 *   [adminaccess](#adminaccess)

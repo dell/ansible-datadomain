@@ -1,6 +1,7 @@
 # DellEMC Data Domain Ansible Collection
 
 Ansible collection is used to get, create, modify or delete the Data Domain resources to automate the configuration tasks easy and fast.
+> **Note that the modules in this collection do not support idempotency.**
 
 ## Pre-requisites
 
