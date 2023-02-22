@@ -17,6 +17,7 @@ import ansible.module_utils.common.json
 import ansible.module_utils.compat.importlib
 import json
 from ..module_utils.cmd_templates import nfs
+from ..module_utils.dd_connect import tab_to_json
 
 
 DOCUMENTATION = r'''
@@ -40,12 +41,12 @@ options:
     state:
         description: Use following option for the action you want to take
         type: str
-        choices: [add, del, create, destroy, enable, disable, modify, rename, reset, set, restart, status]
+        choices: [add, del, create, destroy, enable, disable, modify, rename, reset, set, restart, status, show]
         required: True
     path:
         description: mtree or directory path on the data domain
         type: str
-    client-list:
+    clients:
         description: list of clients to allow access to export
         type: str
 
@@ -58,7 +59,7 @@ options:
     new-export-name:
         description: new export name
         type: str
-    export-options:
+    options:
         description: export options like 'rw,no_root_squash,no_all_squash,secure'
         type: str
 author:
@@ -86,15 +87,15 @@ EXAMPLES = r'''
         state: create
         export-name: backupserver01
         path: /data/col1/backupserver01
-        client-list: 10.0.0.3 10.0.0.4
-        export-options: 'rw,no_root_squash,no_all_squash,secure'
-                                       
+        clients: 10.0.0.3 10.0.0.4
+        options: 'rw,no_root_squash,no_all_squash,secure'
+    #Even if Path does not exists, nfs share will be created. So use MTree module to create it.                                   
 
   - name: remove a client from an export
     dellemc.datadomain.nfs:
         state: del
         export-name: backupserver01
-        client-list: 10.0.0.6 10.0.0.7								   
+        clients: 10.0.0.6 10.0.0.7								   
   
   - name: Destroy and export
     dellemc.datadomain.nfs:
@@ -106,8 +107,8 @@ EXAMPLES = r'''
         state: create
         export-name: backupserver01
         path: /data/col1/backupserver01
-        client-list: 10.0.0.3 10.0.0.4
-        export-options: 'rw,no_root_squash,no_all_squash,secure'
+        clients: 10.0.0.3 10.0.0.4
+        options: 'rw,no_root_squash,no_all_squash,secure'
 
   - name: Rename an export
     dellemc.datadomain.nfs:
@@ -125,10 +126,18 @@ EXAMPLES = r'''
         state: restart
         version: 4 # OPtiona field. Also you can type All to 
 
-  
   - name: Restart NFS servers
     dellemc.datadomain.nfs:
         state: status
+
+  - name: Get Share details
+    dellemc.datadomain.nfs:
+        state: show
+        export-name: backup_share-03
+
+  - name: Get All Share details
+    dellemc.datadomain.nfs:
+        state: show
 '''
 
 
@@ -136,14 +145,13 @@ def main():
     conditions, supported_commands = nfs()
     fields = {
         'state': {'type': 'str', 'choices': ['add', 'del', 'create', 'destroy', 'enable', 'disable', 'modify',
-                                             'rename', 'reset', 'set', 'restart', 'status'], 'required': True},
+                                             'rename', 'reset', 'set', 'restart', 'status', 'show'], 'required': True},
         'path': {'type': 'str'},
-        'client-list': {'type': 'str'},
-        'option-list': {'type': 'str'},
+        'clients': {'type': 'str'},
         'version': {'type': 'str'},
         'export-name': {'type': 'str'},
         'new-export-name': {'type': 'str'},
-        'export-options': {'type': 'str'},
+        'options': {'type': 'str'},
         'host': {'type': 'str', 'required': True},
         'port': {'type': 'int', 'default': 22},
         'username': {'type': 'str', 'required': True},
@@ -185,6 +193,9 @@ def main():
         cmd_output = cmd_builder.run_cmd(module=module, command=command, is_filter=is_filter, server=server,
                                          user=user, port=port, private_key=private_key, password=password, header=header)
         changed = will_change
+        if 'show' in str(command):
+            jsonout = tab_to_json(cmd_output['output'], header)
+            cmd_output['output'] = jsonout
     else:
         state = arg_dict['state']
         possible_options = {}
@@ -198,4 +209,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
