@@ -2247,7 +2247,7 @@ The nfs command enables you to add NFS clients and manage access to a protection
 -   nfs enable
 -   nfs export create $export_name path $path clients $client_list
 -   nfs export destroy $export_name
--   nfs export modify $export_name clients $client-list options $export_options
+-   nfs export modify $export_name clients $clients options $export_options
 -   nfs export rename $export_name $new_export_name
 -   nfs reset clients
 -   nfs restart
@@ -2351,14 +2351,14 @@ The nfs command enables you to add NFS clients and manage access to a protection
     dellemc.datadomain.nfs:
         state: add
         export-name: backupserver01
-        client-list: 10.0.0.6 10.0.0.7
+        clients: 10.0.0.6 10.0.0.7
  
   - name: Create an export, optionally add clients
     dellemc.datadomain.nfs:
         state: create
         export-name: backupserver01
         path: /data/col1/backupserver01
-        client-list: 10.0.0.3 10.0.0.4
+        clients: 10.0.0.3 10.0.0.4
         export-options: 'rw,no_root_squash,no_all_squash,secure'
     **Even if Path does not exists, nfs share will be created. So use MTree module to create it.
                                        
@@ -2367,7 +2367,7 @@ The nfs command enables you to add NFS clients and manage access to a protection
     dellemc.datadomain.nfs:
         state: del
         export-name: backupserver01
-        client-list: 10.0.0.6 10.0.0.7								   
+        clients: 10.0.0.6 10.0.0.7								   
   
   - name: Destroy and export
     dellemc.datadomain.nfs:
@@ -2379,7 +2379,7 @@ The nfs command enables you to add NFS clients and manage access to a protection
         state: create
         export-name: backupserver01
         path: /data/col1/backupserver01
-        client-list: 10.0.0.3 10.0.0.4
+        clients: 10.0.0.3 10.0.0.4
         export-options: 'rw,no_root_squash,no_all_squash,secure'
 
   - name: Rename an export
