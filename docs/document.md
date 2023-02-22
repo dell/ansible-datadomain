@@ -2359,7 +2359,7 @@ The nfs command enables you to add NFS clients and manage access to a protection
         export-name: backupserver01
         path: /data/col1/backupserver01
         clients: 10.0.0.3 10.0.0.4
-        export-options: 'rw,no_root_squash,no_all_squash,secure'
+        options: 'rw,no_root_squash,no_all_squash,secure'
     **Even if Path does not exists, nfs share will be created. So use MTree module to create it.
                                        
 
@@ -2380,7 +2380,7 @@ The nfs command enables you to add NFS clients and manage access to a protection
         export-name: backupserver01
         path: /data/col1/backupserver01
         clients: 10.0.0.3 10.0.0.4
-        export-options: 'rw,no_root_squash,no_all_squash,secure'
+        options: 'rw,no_root_squash,no_all_squash,secure'
 
   - name: Rename an export
     dellemc.datadomain.nfs:
