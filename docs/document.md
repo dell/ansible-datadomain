@@ -2374,14 +2374,6 @@ The nfs command enables you to add NFS clients and manage access to a protection
         state: destroy
         export-name: backupserver01
 
-  - name: Modify an export, clients and/or export options
-    dellemc.datadomain.nfs:
-        state: create
-        export-name: backupserver01
-        path: /data/col1/backupserver01
-        clients: 10.0.0.3 10.0.0.4
-        options: 'rw,no_root_squash,no_all_squash,secure'
-
   - name: Rename an export
     dellemc.datadomain.nfs:
         state: rename
