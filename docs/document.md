@@ -1746,7 +1746,7 @@ The mtree command enables operations on a single “managed tree” (MTree) of a
         state: set
         mtree-path: /data/col1/a001us043nve001
         retention:
-            min-retention-period: 720Minuets 
+            min-retention-period: 720Minutes 
 
   - name: Undelete a MTree
     dellemc.datadomain.mtree:
@@ -2681,7 +2681,7 @@ DD Replicator lets you replicate data (copy and synchronize) between two protect
         <td>No</td>
         <td></td>
         <td></td>
-        <td width="80%">Set the network bandwidth (Bps) for thedes restorer</td>
+        <td width="80%">Set the network bandwidth (Bps) for the restorer</td>
     </tr>
     <tr>
         <td class="elbow-placeholder"></td>
@@ -2811,7 +2811,7 @@ DD Replicator lets you replicate data (copy and synchronize) between two protect
     dellemc.datadomain.replication:
         state: set
         option:
-            bandwidth: 50 #Set the network bandwidth (Bps) for the des restorer
+            bandwidth: 50 #Set the network bandwidth (Bps) for the restorer
             delay: 100 #Set the network delay (ms) for the restorer
 
   - name: Resynchronize replication between the source and destination
