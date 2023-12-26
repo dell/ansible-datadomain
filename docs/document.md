@@ -468,11 +468,11 @@ Physical capacity measurement (PCM) provides space usage information for a sub-s
     dellemc.datadomain.compression:
         state: disable
         
-  - name: Eanble PCM
+  - name: Enable PCM
     dellemc.datadomain.compression:
         state: enable
 
-  - name: Eanble and initialize PCM
+  - name: Enable and initialize PCM
     dellemc.datadomain.compression:
         state: enable
         initialize: true
@@ -1294,6 +1294,7 @@ The filesys command displays statistics, capacity, status, and use of the filesy
         <td width="80%">Use only when state is reset. This will reset both Schedule and Throttle to default values</td>
     </tr>
 </table>
+
 ## Examples
 
 ```
@@ -1687,6 +1688,7 @@ The mtree command enables operations on a single “managed tree” (MTree) of a
         <td width="80%">automatic retention lock delay format 120Minutes</td>
     </tr>
 </table>
+
 ## Examples
 
 ```
@@ -2037,6 +2039,7 @@ The net command manages the use of all IP network features and displays network 
     <tr>
 
 </table>
+
 ## Examples
 
 ```
@@ -2754,6 +2757,7 @@ DD Replicator lets you replicate data (copy and synchronize) between two protect
         <td width="80%">Use when you modify the destination host of replication context</td>
     </tr>
 </table>
+
 ## Examples
 
 ```
@@ -3121,7 +3125,7 @@ Sudarshan Kshirsagar (@kshirs1)
             min-days-between-change: 999
             max-days-between-change: 9999
             warn-days-before-expire: 9998
-            disable-days-after-expire: 10000}
+            disable-days-after-expire: 10000
 
 
   - name:  Reset the password aging policy for a user
