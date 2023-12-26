@@ -278,7 +278,7 @@ Physical capacity measurement (PCM) provides space usage information for a sub-s
         <td>No</td>
         <td></td>
         <td></td>
-        <td width="80%">'Use this option to start/stop the PCM measurement sample</td>
+        <td width="80%">Use this option to start/stop the PCM measurement sample</td>
     </tr>
         <tr>
         <td colspan=2>option</td>
@@ -468,11 +468,11 @@ Physical capacity measurement (PCM) provides space usage information for a sub-s
     dellemc.datadomain.compression:
         state: disable
         
-  - name: Eanble PCM
+  - name: Enable PCM
     dellemc.datadomain.compression:
         state: enable
 
-  - name: Eanble and initialize PCM
+  - name: Enable and initialize PCM
     dellemc.datadomain.compression:
         state: enable
         initialize: true
@@ -1294,6 +1294,7 @@ The filesys command displays statistics, capacity, status, and use of the filesy
         <td width="80%">Use only when state is reset. This will reset both Schedule and Throttle to default values</td>
     </tr>
 </table>
+
 ## Examples
 
 ```
@@ -1687,6 +1688,7 @@ The mtree command enables operations on a single “managed tree” (MTree) of a
         <td width="80%">automatic retention lock delay format 120Minutes</td>
     </tr>
 </table>
+
 ## Examples
 
 ```
@@ -1744,7 +1746,7 @@ The mtree command enables operations on a single “managed tree” (MTree) of a
         state: set
         mtree-path: /data/col1/a001us043nve001
         retention:
-            min-retention-period: 720Minuets 
+            min-retention-period: 720Minutes 
 
   - name: Undelete a MTree
     dellemc.datadomain.mtree:
@@ -2037,6 +2039,7 @@ The net command manages the use of all IP network features and displays network 
     <tr>
 
 </table>
+
 ## Examples
 
 ```
@@ -2678,7 +2681,7 @@ DD Replicator lets you replicate data (copy and synchronize) between two protect
         <td>No</td>
         <td></td>
         <td></td>
-        <td width="80%">Set the network bandwidth (Bps) for thedes restorer</td>
+        <td width="80%">Set the network bandwidth (Bps) for the restorer</td>
     </tr>
     <tr>
         <td class="elbow-placeholder"></td>
@@ -2754,6 +2757,7 @@ DD Replicator lets you replicate data (copy and synchronize) between two protect
         <td width="80%">Use when you modify the destination host of replication context</td>
     </tr>
 </table>
+
 ## Examples
 
 ```
@@ -2807,7 +2811,7 @@ DD Replicator lets you replicate data (copy and synchronize) between two protect
     dellemc.datadomain.replication:
         state: set
         option:
-            bandwidth: 50 #Set the network bandwidth (Bps) for the des restorer
+            bandwidth: 50 #Set the network bandwidth (Bps) for the restorer
             delay: 100 #Set the network delay (ms) for the restorer
 
   - name: Resynchronize replication between the source and destination
@@ -3121,7 +3125,7 @@ Sudarshan Kshirsagar (@kshirs1)
             min-days-between-change: 999
             max-days-between-change: 9999
             warn-days-before-expire: 9998
-            disable-days-after-expire: 10000}
+            disable-days-after-expire: 10000
 
 
   - name:  Reset the password aging policy for a user
