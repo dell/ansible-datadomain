@@ -278,7 +278,7 @@ Physical capacity measurement (PCM) provides space usage information for a sub-s
         <td>No</td>
         <td></td>
         <td></td>
-        <td width="80%">'Use this option to start/stop the PCM measurement sample</td>
+        <td width="80%">Use this option to start/stop the PCM measurement sample</td>
     </tr>
         <tr>
         <td colspan=2>option</td>
