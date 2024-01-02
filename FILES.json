@@ -1,0 +1,313 @@
+{
+ "files": [
+  {
+   "name": ".",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+   "format": 1
+  },
+  {
+   "name": "README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5d79c40e429b0222a16c1836d8b33c7963227afdd59a172ae1452fec556a5308",
+   "format": 1
+  },
+  {
+   "name": "docs",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/document.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "20b64458fd91c8f0a5ee19fdd74f0010b95dcc6d51a4c4bef9b1cf2f22233260",
+   "format": 1
+  },
+  {
+   "name": "plugins",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "277177d9b8bf6c7b784b5a92b820ad21de7e82372a975c0239098f9c2d142263",
+   "format": 1
+  },
+  {
+   "name": "plugins/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6a553ec0af66dff96d52eba2dd05a25d8765eaab30e2076c2dd945b414407373",
+   "format": 1
+  },
+  {
+   "name": "plugins/action",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/action/adminaccess.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a296fc552b83b05a681d9dc8fe3b4d877c22d21ddacf1d206b7f989cb255dce3",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/cifs.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "270cb9530641356c1dd09fd54cbed855defcc8584d43fe1177730ad7a48fda27",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/compression.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6a951cced3b8b99c6ca56fffcafd5dd4b7dbdd90923c6d03c12f1f8ecdecfe2a",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/config.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7d2fb6acd6ccb303ce44eb90adce73993abb45fb29d0ea9812ecbe02f82be66a",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/dd.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3673532ca78615020c9a91df93b20606ef7ebb5b9ba5a28ca90d2a8c7483f50e",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/ddboost.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "90a1fcdd01f1a09e18da0e832581713e4614c0d79a034a1e8c66fee2fda3289b",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/filesys.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c2cff79ca2d99c1fab17a691247be722adb9e850f9e99d85c39489ff5789d043",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/mtree.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8cfce634e6e24a07c418f710b6de36ea798521b72417d9aadabea43c7ae75107",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/net.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7868fe1f38fcf0d1a497f5f8f626b1c38989db820e8f77f89812152f129c44ef",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/nfs.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e8195fe9ef54a8d6d3da47a1d02f0c0c492bf707b46185db3dc11cbd0d8467ae",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/ntp.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "45efbfef6cc890805b98736647de054c1625d7d5e98a59de23621e9f5f8901b3",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/replication.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9e02bf85b21720068ae6aaf7e4b5fb62466bfe21834f4cee12c5340e1f1e90f9",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/users.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f4c150a98bfd717e430fa4b91c45ed7c6b051dafc26f2f61eacc909728d3cad1",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6a553ec0af66dff96d52eba2dd05a25d8765eaab30e2076c2dd945b414407373",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/cmd_builder.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c6359d1d5f99e5c996442e8fef64b5ac3ec3cb8dbeafbae6262b2e76339512fd",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/cmd_templates.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "326d2a1586a1887f1844ab35a4647201d2e78ec41d1258da28465265170dd662",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/dd_connect.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2dcefbc6be2c3d8464acaae409c27671fcbf34fea51f58e13c63ae7040c5904f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6a553ec0af66dff96d52eba2dd05a25d8765eaab30e2076c2dd945b414407373",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/adminaccess.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0c2511dceff97cbc45ecc8426fa25f78119a7a0aab6fb5941bb0ba3aa8b80f1c",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/cifs.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a00cdfd673de27f079863e07844b5cf300790cb0d2a0ceef4b54ed432f5e4090",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/compression.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2df531db0dda2fbc6a7d31716b535e32770bbd36e9c66370909a63b526599790",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/config.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a102991ed6e4c68fdbb61969ee1f601399e21e1b93f069d79334d60f613fd53a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ddboost.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "13a6c2708f7f821f4b9dc3de9ffe32069c9cc232b5ec07c5b3a52874013a3eb4",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/filesys.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "30e9b80e174ed18234e30f11fd18833bc317cf5fdfd548d7a926e92448d216bd",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/mtree.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e50cd938bc0a6b2356ebacf1f582011a10dbef3ac95005f9f5fce449a7999ea2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/net.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9c5a589a8c3eadeb6e1c37618bdb282d97467423771177d7cd4f4d1a6b808850",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/nfs.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "04b7bf70d6edc0786e48e896d1b6815e4407b6e3f1ee6d30183700281e7732cc",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ntp.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "99631b9c241e983b7c8db4a3720a7c16150ea0a8a57a78828bb111e6c7728603",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/replication.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a7bdacffc951cc701f42d867bf2de71a721b836e827c894f39247f1b2e32bedb",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/users.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "38969acf6622e6e7efd9457fb4a97fb9c7f62b6d6d04e5965734ef8600413aab",
+   "format": 1
+  },
+  {
+   "name": "requirements.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5e77aa1b5b9029d5edd2a7e75360f9c3b90683cabf0122afead8c29cda1bed14",
+   "format": 1
+  },
+  {
+   "name": "roles",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/requirements.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "80fce119a938836ebc11798f334e5023b9a7e74cf3e236f6bda3ae5965e57f0f",
+   "format": 1
+  }
+ ],
+ "format": 1
+}

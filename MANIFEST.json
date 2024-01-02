@@ -1,0 +1,32 @@
+{
+ "collection_info": {
+  "namespace": "dellemc",
+  "name": "datadomain",
+  "version": "1.0.0",
+  "authors": [
+   "Sudarshan Kshirsagar <sudarshan.kshirsagar@gmail.com>"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "datadomain"
+  ],
+  "description": "DellEmc Datadomain ansible collection is designed to perform and automate daily administration tasks within Ansible Framework.",
+  "license": [
+   "GPL-2.0-or-later"
+  ],
+  "license_file": null,
+  "dependencies": {},
+  "repository": "http://example.com/repository",
+  "documentation": "http://docs.example.com",
+  "homepage": "http://example.com",
+  "issues": "http://example.com/issue/tracker"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "9a319241f74f8c2c5efeada0e11ea1eae73ba4b7bfde3ac7897fb41b13b3548e",
+  "format": 1
+ },
+ "format": 1
+}
