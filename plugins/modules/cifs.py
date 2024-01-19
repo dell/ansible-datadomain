@@ -258,6 +258,7 @@ def share_modify(server, user, password, endpoint, arg_dict, cmd_output, share_d
     cmd_output['failed'] = False
     cmd_output['changed'] = False
 
+
 def main():
 
     conditions, supported_commands = cifs(status=False)

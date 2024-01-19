@@ -27,10 +27,10 @@ def dd_ssh(server, user, port, command, private_key=None, password=None, header=
     try:
         if private_key is not None:
             k = paramiko.RSAKey.from_private_key_file(private_key)
-            client.connect(hostname=server, username=user, pkey=k, port=port)
+            client.connect(hostname=server, username=user, pkey=k, port=port, banner_timeout=60)
         if password is not None:
             k = password
-            client.connect(hostname=server, username=user, password=k, port=port)
+            client.connect(hostname=server, username=user, password=k, port=port, banner_timeout=60)
         stdin, stdout, stderr = client.exec_command(command)
         outerr = stderr.read().decode('utf-8')
         output = stdout.read().decode('utf-8')

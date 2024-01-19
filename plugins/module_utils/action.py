@@ -34,4 +34,15 @@ def cifs(status):
                  )
     return conditions, payload
 
+
+def adminaccess():
+    conditions = dict(
+        adminaccess_enable_service=dict(query=dict(state='present'), req_key=['service'], opt_key=[], will_change=True, header=None),
+        adminaccess_disable_service=dict(query=dict(state='absent'), req_key=['service'], opt_key=[], will_change=True, header=None)
+    )
+
+    payload = dict(adminaccess_enable_service='adminaccess enable',
+    adminaccess_disable_service='adminaccess disable'
+    )
     
+    return conditions, payload
