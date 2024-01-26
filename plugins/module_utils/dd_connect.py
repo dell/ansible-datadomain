@@ -196,6 +196,7 @@ def tab_to_json(output, header=None):
                 obj = line.split('\n')
                 data = {}
                 for o in obj:
+                    
                     if ":" in o:
                         key, value = o.split(":", 1)
 
@@ -205,11 +206,12 @@ def tab_to_json(output, header=None):
                             data[key.strip().lower().replace(' ', '_')] = []
                     else:
                         if len(o) > 0 and '*' not in o:
+
                             try:
                                 key, value = re.split('\s\s+', o.strip())
                                 data[key.lower().replace(' ', '_')] = value.strip()
                             except Exception as e:
-                                # print(e)
+                                data[key.strip().lower().replace(' ', '_')].append(o.strip())
                                 pass
 
                 final_data.append(data)
@@ -223,5 +225,3 @@ def tab_to_json(output, header=None):
                 data['output'].append(line)
         final_data.append(data)
         return final_data
-
-

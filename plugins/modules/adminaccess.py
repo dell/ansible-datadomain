@@ -21,17 +21,10 @@ from ..module_utils.action import adminaccess
 
 DOCUMENTATION = r'''
 ---
-module: cifs
-short_description: This module is used to manage the CIFS services on datadomain
+module: adminaccess
+short_description: This module can be used to manage the services using adminaccess command.
 version_added: "1.0.0"
-description: This module supported below actions on CIFS services
-  - cifs enable
-  - cifs disable
-  - cifs share create
-  - cifs share modify
-  - cifs share enable
-  - cifs share disable
-  - cifs share destroy
+description: All configurations using adminaccess command are not supported. This module only supports enable/disable of services like http, https, ftp, ftps, telnet, ssh, scp, web-service. 
   
 options:
   state:
