@@ -59,26 +59,26 @@ EXAMPLES = r'''
   - name: Add one or more remote time servers
     dellemc.datadomain.ntp:
         state: present
-	timeserver:
-	    - 10.0.0.1
-	    - 10.0.0.2
+        timeserver:
+            - 10.0.0.1
+            - 10.0.0.2
 
   - name: Delete one or more remote time servers
     dellemc.datadomain.ntp:
         state: absent
-	timeserver:
-	    - 10.0.0.1
+        timeserver:
+            - 10.0.0.1
 
   - name: Disable the NTP local server
     dellemc.datadomain.ntp:
         state: absent
-	reset: yes
+	    reset: yes
 
   - name: Add one or more remote time servers
     dellemc.datadomain.ntp:
         state: absent
-	timeserver:
-	reset: yes
+        timeserver:
+        reset: yes
 
 '''
 

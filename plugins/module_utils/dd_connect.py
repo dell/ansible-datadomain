@@ -103,10 +103,10 @@ def dd_requests(server, user, api_pass, endpoint, request_type, payload, query_p
         else:
             url = url
         response = requests.request(f"{request_type}", url, headers=headers, verify=False, data=payload)
-        success_service = [200, 201]
+        success_service = [200, 201,203]
         if int(response.status_code) in success_service:
             command_outout['failed'] = False
-            command_outout['output'] = eval(response.text)
+            command_outout['output'] = json.loads(response.text)
         else:
             command_outout['failed'] = True
             command_outout['output'] = eval(response.text)
