@@ -23,10 +23,10 @@ import re
 
 DOCUMENTATION = r'''
 ---
-module: ntp
-short_description: This module is used to manage the configuration using ntp command.
+module: nfs
+short_description: This module enables you to add NFS clients and manage access to a protection system..
 version_added: "1.0.0"
-description: This module is used to manage the configuration using ntp command.
+description: This module enables you to add NFS clients and manage access to a protection system.
   
 options:
   state:
