@@ -23,10 +23,10 @@ import re
 
 DOCUMENTATION = r'''
 ---
-module: nfs
-short_description: This module enables you to add NFS clients and manage access to a protection system..
+module: mtree
+short_description: This module enables you to  manage mtrees..
 version_added: "1.0.0"
-description: This module enables you to add NFS clients and manage access to a protection system.
+description: This module enables you to add, delete, modify, undelete operations on mtree using mtree command. For quota operations, use quota module.
   
 options:
 state:
