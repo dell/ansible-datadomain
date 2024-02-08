@@ -536,7 +536,7 @@ def main():
 
                     status = 'SUCCESS' if status else 'FAILED'
                     cmd_combined_out.append({'status': status, 'output': output})
-                    if not status:
+                    if status != 'SUCCESS':
                       cmd_output['failed'] = True
                       break 
                     else:
