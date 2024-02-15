@@ -23,10 +23,10 @@ import re
 
 DOCUMENTATION = r'''
 ---
-module: mtree
-short_description: This module enables you to manage quotas on mtrees, storage units..
+module: user
+short_description: This module enables you to manage users
 version_added: "1.0.0"
-description: The quota command lets you modify the amount of storage space for MTrees and for VTL and DD Boost storage units. 
+description: This module enables you to add, delete users and set password aging and strength options.
   
 options:
 state:
@@ -35,9 +35,11 @@ state:
   - present
   - absent
   required: true
+  description: Use one of the option to run the playbook
 name:
   type: str
   required: false
+  description: Type the user Name
 role:
   type: str
   choices:
@@ -47,60 +49,77 @@ role:
   - backup-operator
   - none
   required: false
+  description: The type of user permissions allowed.
 user_password:
   type: str
   required: false
+  description: User Password
 new_password:
   type: str
   required: false
+  description: New User Password. Use when you want to change the password.
 destroy:
   type: str
   required: false
+  description: Use yes/true for deletion of user. In absense of this key, user will be disabled.
 aging:
   type: dict
+  description: User password aging
   options:
     all:
       type: bool
       required: false
+      description: Use this option only to reset all the password aging options.
     min-days-between-change:
       type: int
       required: false
+      description: Minimum number of days allowed before the password can be changed again.
     max-days-between-change:
       type: int
       required: false
+      description: Maximum number of days before password expires.
     warn-days-before-expire:
       type: int
       required: false
+      description: Number of days of warning before a password expires.
     disable-days-after-expire:
       type: int
       required: false
+      description: Account is disabled if inactive for the specified number of days past expiration.
 strength:
   type: dict
+  description: User Password Strength 
   options:
     all:
       type: bool
       required: false
+      description: Use this option only to reset all password strength options
     min-length:
       type: int
       required: false
+      description: Ser minimum number of characters in the password. Default 6.
     max-three-repeat:
       type: str
       choices:
       - enabled
       - disabled
       required: false
+      description: Enable the requirement for a maximum of three repeated characters. The default setting is disabled.
     passwords-remembered:
       type: int
       required: false
+      description: Enable the requirement for a number of previoius passwords remembered
     min-positions-changed:
       type: int
       required: false
+      description: MIn Positions changed
     dictionary-match:
       type: str
       choices:
       - enabled
       - disabled
       required: false
+      description: Enable the requirement to check for dictionary words
 author:
     - Sudarshan Kshirsagar (@kshirs1)
 '''
@@ -215,6 +234,7 @@ EXAMPLES = r'''
         name: boostuser02
 				destroy: yes
 '''
+
 
 def tab_to_json(output, header=None, rename_keys=None):
     final_data = []
@@ -648,18 +668,18 @@ def main():
                         'max-days-between-change': {'type': 'int', 'required': False}, 'warn-days-before-expire': {'type': 'int', 'required': False},
                         'disable-days-after-expire': {'type': 'int', 'required': False}}
                         },
-    'strength': {'type': 'dict', 'options':  {'all': {'type': 'bool', 'required': False},
-                'min-length': {'type': 'int', 'required': False},
-				'max-three-repeat': {'type': 'str',  'choices': ['enabled', 'disabled'], 'required': False}, 
-                'passwords-remembered': {'type': 'int',  'required': False}, 
-				'min-positions-changed': {'type': 'int', 'required': False},
-				'dictionary-match': {'type': 'str', 'choices': ['enabled', 'disabled'], 'required': False}}
-                },
-    'host': {'type': 'str', 'required': True},
-    'port': {'type': 'int', 'default': 22},
-    'username': {'type': 'str', 'required': True},
-    'private_key': {'type': 'str', 'no_log': True},
-    'password': {'type': 'str', 'no_log': True},
+        'strength': {'type': 'dict', 'options':  {'all': {'type': 'bool', 'required': False},
+                    'min-length': {'type': 'int', 'required': False},
+                    'max-three-repeat': {'type': 'str',  'choices': ['enabled', 'disabled'], 'required': False}, 
+                    'passwords-remembered': {'type': 'int',  'required': False}, 
+                    'min-positions-changed': {'type': 'int', 'required': False},
+                    'dictionary-match': {'type': 'str', 'choices': ['enabled', 'disabled'], 'required': False}}
+                    },
+        'host': {'type': 'str', 'required': True},
+        'port': {'type': 'int', 'default': 22},
+        'username': {'type': 'str', 'required': True},
+        'private_key': {'type': 'str', 'no_log': True},
+        'password': {'type': 'str', 'no_log': True},
     }
     module = AnsibleModule(argument_spec=fields, mutually_exclusive=[('private_key', 'password'), ('aging', 'strength')],
                           required_one_of=[('private_key', 'password')])
@@ -759,9 +779,6 @@ def main():
                                 req_keys_check.append(True)
                             else:
                                 req_keys_check.append(False)
-                        cmd_output['output'] = req_keys_check
-                        cmd_output['failed'] = False
-                        cmd_output['changed'] = False
                         if all(req_keys_check):
                             action = 'users_service'
                             modify = ['add']
