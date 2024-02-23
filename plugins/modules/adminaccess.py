@@ -16,7 +16,6 @@ from ..module_utils import cmd_builder
 import ansible.module_utils.common.json
 import ansible.module_utils.compat.importlib
 import json
-from ..module_utils.action import adminaccess
 
 
 DOCUMENTATION = r'''
@@ -55,6 +54,18 @@ EXAMPLES = r'''
         state: present
         service: http 
 '''
+
+def adminaccess():
+    conditions = dict(
+        adminaccess_enable_service=dict(query=dict(state='present'), req_key=['service'], opt_key=[], will_change=True, header=None),
+        adminaccess_disable_service=dict(query=dict(state='absent'), req_key=['service'], opt_key=[], will_change=True, header=None)
+    )
+
+    payload = dict(adminaccess_enable_service='adminaccess enable',
+    adminaccess_disable_service='adminaccess disable'
+    )
+
+    return conditions, payload
 
 def service_status(server, user, password, arg_dict):
     command = 'adminaccess show'
